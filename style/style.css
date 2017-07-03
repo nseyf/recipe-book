@@ -21,8 +21,29 @@
 .col-xs-4 {
   font-weight: 300;
   font-size: 20px;
+  padding-bottom: 5px;
 }
 
 label {
   font-weight: 300;
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  background: white;
+  font-weight: 700;
+
+  color: #151515;
+  border: 2px solid #f5f5f5;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #e2ebf0;
+  transition: 0.2s;
+  border: 2px solid white;
+}
+.btn:focus {
+  outline: none;
 }

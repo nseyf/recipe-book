@@ -56,13 +56,13 @@ if(!this.props.recipe) {
     padding:"25px 0 0",
     marginBottom:"10px",
     textAlign: "left",
-    borderBottom: " 3px solid #C9ADA7"
+    borderBottom: "3px solid #e2ebf0"
   }}>
   <h1 style={{
       fontWeight: "700",
       paddingBottom: "20px",
       letterSpacing: "3px",
-      borderLeft: "5px solid #C9ADA7",
+      borderLeft: "5px solid #e2ebf0",
       color: "#22223B",
       padding: "25px"
     }}>{recipe.dish.toUpperCase()} </h1>

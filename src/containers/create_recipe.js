@@ -13,7 +13,7 @@ console.log(values);
 }
 
     render() {
-
+/*
       const buttonStyle = {
       border: "none",
       borderRadius: "0",
@@ -23,7 +23,7 @@ console.log(values);
       color: "#151515",
       marginTop: "10px"
       }
-
+      */
 
       const { handleSubmit } = this.props;
     return (
@@ -45,11 +45,11 @@ console.log(values);
                 <label htmlFor="cookTime">How long does the dish take to cook? (in minutes)</label>
                 <Field className="form-control" name="cookTime" component="input" type="number" />
                 </div>
-                <button className="btn" style={buttonStyle} type="submit">SUBMIT</button>
+                <button className="btn" type="submit">SUBMIT</button>
 
       </form>
 <Link to='/'>
-  <button className="btn" style={buttonStyle}>BACK TO HOME</button>
+  <button className="btn">BACK TO HOME</button>
 </Link>
 </div>
     )
