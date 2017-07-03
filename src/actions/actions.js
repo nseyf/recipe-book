@@ -1,3 +1,4 @@
+
 export function activeRecipe(recipe){
   return {
     type: "CHANGE_ACTIVE_RECIPE",
@@ -6,6 +7,7 @@ export function activeRecipe(recipe){
 }
 
 export function createRecipe(recipe){
+
   return {
     type: "CREATE_RECIPE",
     payload: recipe

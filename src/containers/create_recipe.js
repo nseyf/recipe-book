@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
@@ -7,7 +8,8 @@ import { createRecipe } from '../actions/actions';
 class CreateRecipeForm extends Component {
 
 onSubmit(values) {
-  this.props.createRecipe(values)
+this.props.createRecipe(values);
+console.log(values);
 }
 
     render() {
@@ -21,6 +23,7 @@ onSubmit(values) {
       color: "#151515",
       marginTop: "10px"
       }
+
 
       const { handleSubmit } = this.props;
     return (
@@ -53,31 +56,17 @@ onSubmit(values) {
 }
 }
 
+function mapStateToProps(state) {
+  return { recipes: state.recipes }
+}
 
-export default reduxForm({
-  form: 'CreateRecipeForm'
-})(CreateRecipeForm);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({createRecipe: createRecipe}, dispatch)
+}
+
+export default reduxForm({form: "CreateRecipeForm"})(connect(mapStateToProps, mapDispatchToProps)(CreateRecipeForm));
+// Have to connect the form to redux, use it to update recipes.js with new values
 
 
-/*
-<FieldArray name="ingredients" component={ingredients =>
-  <ul>
-  <li>
-    <button type='button' onClick={() => push('ingredients')}>Add Ingredient</button>
-    </li>
-    {ingredients.map((ingredient, ingredientIndex) =>
-      <li key={ingredientIndex}>
-        <button
-          type="button"
-          title="Remove Ingredient"
-          onClick={() => ingredients.remove(ingredientIndex)}/>
-      </li>
-    )}
-  </ul>
-  }/>
-  }
-<button type="submit">Submit Recipe </button>
-
-*/
 //Form must account for the following
 // dish, serves, Preptime, cooktime, ingredients(li), method

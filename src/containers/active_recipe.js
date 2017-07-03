@@ -46,7 +46,7 @@ class ActiveRecipe extends Component {
 
   render() {
 if(!this.props.recipe) {
-  return <div><h4 style={{borderBottom: "2px solid #f5f5f5", marginTop: "20px",fontWeight: "700"}}>YOUR RECIPES:</h4></div>
+  return <div><h3 style={{borderBottom: "2px solid #f5f5f5", marginTop: "20px",fontWeight: "700"}}>YOUR RECIPES:</h3></div>
 }
     const recipe = this.props.recipe;
     return (
@@ -54,14 +54,15 @@ if(!this.props.recipe) {
       <div className="col-md-8 col-xs-12" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", background: "white", marginTop: "5px", marginBottom: "10px"}}>
 <div className="col-xs-12" style={{
     padding:"25px 0 0",
-    marginBottom:"5px",
+    marginBottom:"10px",
     textAlign: "left",
-    borderBottom: "4px solid #f5f5f5"
+    borderBottom: " 3px solid #C9ADA7"
   }}>
   <h1 style={{
       fontWeight: "700",
       paddingBottom: "20px",
       letterSpacing: "3px",
+      borderLeft: "5px solid #C9ADA7",
       color: "#22223B",
       padding: "25px"
     }}>{recipe.dish.toUpperCase()} </h1>
