@@ -1,0 +1,24 @@
+.col-xs-12 li {
+  padding-bottom: 10px;
+}
+
+.recipeListDisplayItem:hover {
+  cursor: pointer;
+  background: #C9ADA7;
+  transition: 0.2s;
+  color: white;
+}
+
+.recipeListDisplayItem {
+  border-radius: 0px;
+  border: none;
+  font-weight: 700;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.col-xs-4 {
+  font-weight: 300;
+  font-size: 20px;
+}
